@@ -17,17 +17,18 @@
 // isPowerOf2(6);
 // isPowerOf2(536870912);
 
-//// Iterative approach: Instead of using logarithms, consider an iterative approach where you repeatedly divide the number by 2 until it becomes 1 or an odd number. If it becomes an odd number before reaching 1, then it is not a power of two. ////
-function isPowerOfTwo(n) {
-  let x = 0;
-  while (2 ** x < n) {
-    x++;
-  }
-  return 2 ** x === n;
-}
+//// Iterative approach: Instead of using logarithms, consider an iterative approach where you repeatedly divide the number by 2 until it becomes 1 or an odd number. If it becomes an odd number before reaching 1, then it is not a power of two. Therefore, the overall time complexity of the function is O(log₂(n)). ////
+
+// function isPowerOfTwo(n) {
+//   let x = 0;
+//   while (2 ** x < n) {
+//     x++;
+//   }
+//   return 2 ** x === n;
+// }
 
 // Consider the binary representation: Numbers that are powers of two have a distinct pattern in their binary representation. Try to observe this pattern and see if you can identify any unique properties that can help you detect powers of two.
 
-function binaryPow(n) {
-  let binFormat = Number.parseInt(n, 2);
+function isPowerOfTwo(n) {
+  return n > 0 && (n & (n - 1)) === 0;
 }
