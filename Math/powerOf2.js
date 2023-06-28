@@ -28,7 +28,8 @@
 // }
 
 // Consider the binary representation: Numbers that are powers of two have a distinct pattern in their binary representation. Try to observe this pattern and see if you can identify any unique properties that can help you detect powers of two.
-
 function isPowerOfTwo(n) {
   return n > 0 && (n & (n - 1)) === 0;
 }
+
+isPowerOfTwo(64);
